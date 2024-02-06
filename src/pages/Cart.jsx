@@ -6,7 +6,6 @@ function Cart() {
   const handleCart = async () => {
     const cart = await axios.get("https://fakestoreapi.com/carts/5");
     const products = await axios.get("https://fakestoreapi.com/products");
-    // console.log(cart);
     const newCart = cart.data.products.map((cartItem) => {
       const product = products.data.find((p) => p.id === cartItem.productId);
       return {

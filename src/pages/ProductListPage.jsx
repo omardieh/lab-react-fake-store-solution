@@ -8,6 +8,7 @@ function ProductListPage() {
 
   // frontend route : /product/details/15
   // backend route : /products/15
+
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
